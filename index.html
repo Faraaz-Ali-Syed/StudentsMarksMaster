@@ -1,61 +1,53 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="stylesheet" href="style.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.27.2/axios.min.js"></script>
+  <link rel="stylesheet" href="test.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.27.2/axios.min.js"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>TEST</title>
 </head>
 <body>
-    <h1>BPK Tech - Student Master</h1>
-    
-    
-  <div class="wrapper">
-    <form class="buttons">
-      <button class="buttonc" onclick=""  type="avg" id="'avg">*Please Enter Valid Information*</button>
-    </form>
-    
-    <form id="survey_options">
-      
-      <input id="id" type="number" name="survey_options[]" class="survey_options" size="50" placeholder="Student ID (Integer)" required>
-      <input id="name" type="text" name="survey_options[]" class="survey_options" size="50" placeholder="Student Name (Text)">
-      <select class="sgrade" id="sgrade">
-        <option value="">Choose Grade ( 1 ot 8 )</option>
-        <option value="1">One</option>
-        <option value="2">Two</option>
-        <option value="3">Three</option>
-        <option value="4">Four</option>
-        <option value="5">Five</option>
-        <option value="6">Six</option>
-        <option value="7">Seven</option>
-        <option value="8">Eight</option>
-        
-      
-    </select>
-      <input id="grade" min="1" max="8" type="number" name="survey_options[]" class="survey_options" size="50" placeholder="Grade (One - Eight)">
-        
-    </form>
-    <div class="controls">
-      <a href="#" id="add_more_fields"><i class="fa fa-plus"></i>Add Subject +</a>
-      <a href="#" id="remove_fields"><i class="fa fa-plus"></i>Remove Subject -</a>
-      <form class="buttons">
-        <button class="buttonc" onclick=""  type="avg" id="'avg">Auto-calculates the average below ( DYNAMIC )</button>
-      </form>
-    <form id="calc">
-    <input id="avg" type="number" name="survey_options[]" class="survey_options" size="50" placeholder="Total Average (%)">
-  </form>
-  <form class="buttons">
-  <button class="button" onclick="add(event)"  type="submit" id="'submit"> Submit</button>
+  <center>
+<h1>BPK TECH - Student Master</h1>
+<center>
+<center>
+<a href="#" id="add_more_fields"><i class="fa fa-plus"></i>Add Subject +</a>
+<a href="#" id="remove_fields"><i class="fa fa-plus"></i>Remove Subject -</a>
+</center>
+<br>
+<form >
+<center><table border="4" class="styled-table" >
+    <tr id="display" >
+      <th name="display[]" class="display">Studend ID (int)</th>
+      <th name="display[]" class="display">Student Name (Text)</th>
+      <th name="display[]" class="display">Grade</th>
+      <th name="display[]" class="display" >Overall Avg</th>
+    </tr>
+    <tr id="details">
+      <td><input id="id" type="number" name="details[]" class="details" size="1" placeholder="Student ID (Integer)" required></td>
+      <td><input id="name" type="text" name="details[]" class="details" size="30" placeholder="Student Name (Text)" required></td>
+      <td><input id="grade" min="1" max="8" type="number" name="details[]" class="details"  placeholder="Grade (One - Eight)" required></td>
+      <td><input id="avg"  size="80" type="number"  placeholder="Auto Generated(%)" readonly></td>
+  </table>
+  <br>
+<button type="submit" name="submit" onclick="postdata()">Submit</button>
+
+
+</center>
+<center>
 </form>
-  
+<br>
+<br>
+<br>
 <div class="controls">
-  <button class="button-85" onclick="get(event)" type="get" id="'get">CLICK HERE TO GET ALL THE STUDENTS LIST WHO SCORED MORE THAN 60%</button>
+  <a href="#" id="getdata"><i class="fa fa-plus"></i>CLICK HERE TO GET ALL THE STUDENTS LIST WHO SCORED MORE THAN 60%</a>
 </div>
+<br>
 
-
-<div class="table">
-<table border="1" style="width:200%">
+<div class="styled-table">
+<table border="4" style="width:40%">
   <tr>
     <th scope="'col">Student ID</th>
     <th scope="'col">Student Name</th>
@@ -68,13 +60,10 @@
 </table>
 
 </div>
-
-
-
-  <script src="script.js">
-
-
-  </script>
-  
+</center>
 </body>
 </html>
+<script src="test.js">
+
+
+</script>
