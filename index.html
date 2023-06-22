@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.27.2/axios.min.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>BPK Tech - Student Master</h1>
+    
+    
+  <div class="wrapper">
+    <form class="buttons">
+      <button class="buttonc" onclick=""  type="avg" id="'avg">*Please Enter Valid Information*</button>
+    </form>
+    
+    <form id="survey_options">
+      
+      <input id="id" type="number" name="survey_options[]" class="survey_options" size="50" placeholder="Student ID (Integer)" required>
+      <input id="name" type="text" name="survey_options[]" class="survey_options" size="50" placeholder="Student Name (Text)">
+      <select class="sgrade" id="sgrade">
+        <option value="">Choose Grade ( 1 ot 8 )</option>
+        <option value="1">One</option>
+        <option value="2">Two</option>
+        <option value="3">Three</option>
+        <option value="4">Four</option>
+        <option value="5">Five</option>
+        <option value="6">Six</option>
+        <option value="7">Seven</option>
+        <option value="8">Eight</option>
+        
+      
+    </select>
+      <input id="grade" min="1" max="8" type="number" name="survey_options[]" class="survey_options" size="50" placeholder="Grade (One - Eight)">
+        
+    </form>
+    <div class="controls">
+      <a href="#" id="add_more_fields"><i class="fa fa-plus"></i>Add Subject +</a>
+      <a href="#" id="remove_fields"><i class="fa fa-plus"></i>Remove Subject -</a>
+      <form class="buttons">
+        <button class="buttonc" onclick=""  type="avg" id="'avg">Auto-calculates the average below ( DYNAMIC )</button>
+      </form>
+    <form id="calc">
+    <input id="avg" type="number" name="survey_options[]" class="survey_options" size="50" placeholder="Total Average (%)">
+  </form>
+  <form class="buttons">
+  <button class="button" onclick="add(event)"  type="submit" id="'submit"> Submit</button>
+</form>
+  
+<div class="controls">
+  <button class="button-85" onclick="get(event)" type="get" id="'get">CLICK HERE TO GET ALL THE STUDENTS LIST WHO SCORED MORE THAN 60%</button>
+</div>
+
+
+<div class="table">
+<table border="1" style="width:200%">
+  <tr>
+    <th scope="'col">Student ID</th>
+    <th scope="'col">Student Name</th>
+    <th scope="'col">Student Grade</th>
+    <th scope="'col">Student Percentage</th>
+  </tr>
+  <tbody id="tb">
+
+  </tbody>
+</table>
+
+</div>
+
+
+
+  <script src="script.js">
+
+
+  </script>
+  
+</body>
+</html>
